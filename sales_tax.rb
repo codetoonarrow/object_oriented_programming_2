@@ -46,12 +46,6 @@ class Receipt < Item
         end
 
         puts "-------------------------"
-
-        def tally(adding)
-          adding.each do |x|
-            x + ("#{@price}")
-          end
-        end
 end
 
 book = Receipt.new(1,"Book", 12.49)
