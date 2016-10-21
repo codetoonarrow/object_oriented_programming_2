@@ -7,27 +7,40 @@ class Person
 
 end
 
-
 # Create class called Student.
 class Student < Person
 
 #Made unique greeting in method
   def learn
-    puts "I'm learnding!"
-    
+    puts "I get it! I'm learnding!"
+# puts "Hi my name is #{name}"
+  end
+
+  def greeting
+    puts "Hello my name is #{@name}"
   end
 
 end
 
+cristina = Student.new("Cristina")
+cristina.learn
+cristina.greeting
+# cristina.teach => this doesn't work because it is an undefined method
+
 #Create class called Instructor
-class Instructor <Person
+class Instructor < Person
 
 #Made unique greeting in method
   def teach
-  puts "Everything in ruby is an object"
+  puts "Everything in ruby is an object. My name is #{@name}"
+  end
+
+  def greeting
+    "Hello my name is #{@name}"
   end
 
 end
 
-luke = Student.new("Luke")
-bob = Instructor.new("Bob")
+chris = Instructor.new("Chris")
+chris.teach
+chris.greeting
